@@ -73,7 +73,7 @@
       <hr>
 
       <script>
-        // Array of slide image URLs
+      
         var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
         var currentSlide = 0;
         
@@ -81,22 +81,23 @@
           document.getElementById('slide').src = slideImages[currentSlide];
         }
         
-        function prevSlide() {
-          currentSlide = (currentSlide - 1 + slideImages.length) %slideImages.length:
+        
+        function nextSlide() {
+          currentSlide = (currentSlide + 1 ) % slideImages.length;
           showSlide();
         }
         
-        }
-        function nextSlide() {
-          currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length:
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slideImages.length) %slideImages.length;
           showSlide();
         }
-
-        }
+        
+       
         function showSlideNumber(slideNumber) {
           currentSlide = slideNumber - 1;
           showSlide();
         }
+        
         showSlide();
       </script>
       <div id="slide-container">
