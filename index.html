@@ -78,11 +78,19 @@
         var currentSlide = 0;
         
         function showSlide() {
-          document.getElementById('slide').src = slideImages[currentSlide];
+          document.getElementById("slide").src = slideImages[currentSlide];
         }
         function prevSlide() {
-          currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length:
+          currentSlide = (currentSlide - 1 + slideImages.length) %slideImages.length:
+          showSlide();
         }
+        
+        }
+        function nextSlide() {
+          currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length:
+          showSlide();
+        }
+        
         function showSlideNumber(slideNumber) {
           currentSlide = slideNumber - 1;
           showSlide();
